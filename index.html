@@ -351,9 +351,39 @@ admin.site.register(Mascota)
 <p> Configuramos la carpeta de plantiallas <strong>admin.py</strong><p> 
 <pre>
 <code class="python">
-{% block content %}
-  <h4>Este es el contenido</h4>
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
+</code>
+</pre>
+
+<p> Creando un bloque<p> 
+<pre>
+<code class="python">
+{% block title %}  
+    Este es el title
 {% endblock %}
+</code>
+</pre>
+
+<p> Heredamos un bloque<p> 
+<pre>
+<code class="python">
+{% extends 'base/base.html' %}
+
+{% block title %} Mascotas {% endblock %}
 </code>
 </pre>
 
