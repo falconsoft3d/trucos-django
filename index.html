@@ -1,194 +1,165 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<meta name="description" content="Trucos de Progarmación de Odoo 10.0">
-<meta name="HandheldFriendly" content="True">
-<meta name="MobileOptimized" content="320">
-<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>TRUKOS-DJANGO</title>
-<link rel="shortcut icon" href="favicon.png">
-<link rel="alternate" type="application/rss+xml" title="frittt.com" href="feed/index.html">
-<link rel="stylesheet" href="css/style.css">
-<meta name="google-site-verification" content="6SJfppWH73AwMKg9GAzWM4Htzr0i60eHL0H3PAvv7cw" />
- 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
-<link rel="stylesheet" href="css/dracula.css">
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script> 
-<script>hljs.initHighlightingOnLoad();</script>
+  <meta charset="utf-8">
+  <meta name="description" content="Trucos de Progarmación de Odoo 10.0">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>TRUKOS-DJANGO</title>
+  <link rel="shortcut icon" href="favicon.png">
+  <link rel="alternate" type="application/rss+xml" title="frittt.com" href="feed/index.html">
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="google-site-verification" content="6SJfppWH73AwMKg9GAzWM4Htzr0i60eHL0H3PAvv7cw" />
 
-<!--Start of Zendesk Chat Script-->
-<script type="text/javascript">
-window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
-d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
-_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
-$.src="https://v2.zopim.com/?5ovGR8CLlVmIyVhkXGm3upeCBSyUlqHE";z.t=+new Date;$.
-type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
-</script>
-<!--End of Zendesk Chat Script-->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+  <link rel="stylesheet" href="css/dracula.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script> 
+  <script>hljs.initHighlightingOnLoad();</script>
 
- 
- 
-</head>
- 
-<body>
-
+  <!--Start of Zendesk Chat Script-->
+  <script type="text/javascript">
+    window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+      d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+        _.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
+        $.src="https://v2.zopim.com/?5ovGR8CLlVmIyVhkXGm3upeCBSyUlqHE";z.t=+new Date;$.
+        type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
+      </script>
+      <!--End of Zendesk Chat Script-->
+    </head>
+    <body>
+      <a class="orange_mar hidden-xs" href="http://www.marlonfalcon.cl/" marked="1">
+       <img id="marlon" style="position: fixed; top: 0; right: 0; border: 0;z-index:9999;" src="img/right_orange.png" alt="marlon">
+     </a>
 
 
-<a class="orange_mar hidden-xs" href="http://www.marlonfalcon.cl/" marked="1">
-     <img id="marlon" style="position: fixed; top: 0; right: 0; border: 0;z-index:9999;" src="img/right_orange.png" alt="marlon">
-</a>
+     <div class="wrapper">
+      <nav>
+
+       <div class="pull-left">
+         <h1><a href="http://www.marlonfalcon.cl" target="_blank"><img class="w" src="img/w.png" alt="Free Documentation Template Icon" /> <span>+56 9 7882 5365</span></a></h1>
+       </div>
+     </nav>
+     <style>
+     .w{
+      height: 30px;
+      width: 30px; 
+    }
+  </style>
 
 
-<div class="wrapper">
-<nav>
- 
-  	<div class="pull-left">
-    	<h1><a href="http://www.marlonfalcon.cl" target="_blank"><img class="w" src="img/w.png" alt="Free Documentation Template Icon" /> <span>+56 9 7882 5365</span></a></h1>
+
+  <header>
+    <div class="container">
+      <h2 class="lone-header">Guía de Programación de Django</h2>
     </div>
+  </header>
+  <section>
+    <div class="container">
+      <ul class="docs-nav">
+        <li><strong>1 Introducción</strong></li>
+        <li><a href="#que-es-django" class="cc-active">1.1 ¿Qué es Django?</a></li>
+        <li><a href="#instalando-django" class="cc-active">1.2 Instalando Django</a></li>
 
+        <li class="separator"></li>
+        <li><strong>2 Programación en Python</strong></li>
+        <li><a href="#var1" class="cc-active">2.1 Variables</a></li>
+        <li><a href="#var2" class="cc-active">2.2 Funciones</a></li>
+        <li><a href="#var3" class="cc-active">2.3 Clases</a></li>
 
-  
-    
-
-</nav>
-
-
-<style>
-	.w{
-        height: 30px;
-        width: 30px; 
-	}
-
-</style>
-
-
-
-<header>
-  <div class="container">
-    <h2 class="lone-header">Guía de Programación de Django</h2>
-  </div>
-</header>
-<section>
-  <div class="container">
-    <ul class="docs-nav">
-      <li><strong>1 Introducción</strong></li>
-      <li><a href="#que-es-django" class="cc-active">1.1 ¿Qué es Django?</a></li>
-      <li><a href="#instalando-django" class="cc-active">1.2 Instalando Django</a></li>
-
-      <li class="separator"></li>
-      <li><strong>2 Programación en Python</strong></li>
-      <li><a href="#var1" class="cc-active">2.1 Variables</a></li>
-      <li><a href="#var2" class="cc-active">2.2 Funciones</a></li>
-      <li><a href="#var3" class="cc-active">2.3 Clases</a></li>
-
-    </ul>
-    <div class="docs-content">
-    
-      <h3 id="que-es-django">1.1 ¿Qué es Django?</h3>      
-      <p> <strong>Django</strong> Django es un framework para aplicaciones web gratuito y open source, escrito en Python. Es un WEB framework - un conjunto de componentes que te ayudan a desarrollar sitios web más fácil y rápidamente.
-      <p> Entre sus principales módulos podemos señalar:</p>
-     <ul>
-        <li>Codigo Abierto</li>
-        <li>Usa Python</li>
       </ul>
+      <div class="docs-content">
+
+        <h3 id="que-es-django">1.1 ¿Qué es Django?</h3>      
+        <p> <strong>Django</strong> Django es un framework para aplicaciones web gratuito y open source, escrito en Python. Es un WEB framework - un conjunto de componentes que te ayudan a desarrollar sitios web más fácil y rápidamente.
+          <p> Entre sus principales módulos podemos señalar:</p>
+          <ul>
+            <li>Codigo Abierto</li>
+            <li>Usa Python</li>
+          </ul>
 
 
-      <h3 id="instalando-django">1.2 Instalando Django</h3>      
-      <p> Creamos el entorno virtual <p> 
-       <pre>
-          <code class="python">
-          virtualenv env --python=python3
-          cd env
-          source bin/activate
-          </code>
-       </pre>
-       <p> Instalamos Django 2.0 <p> 
-       <pre>
-          <code class="python">
-          pip install Django
-          </code>
-       </pre>
-       <p> Creamos un proyecto en Django <p> 
-       <pre>
-          <code class="python">
-          django-admin startproject miproyecto
-          </code>
-       </pre>
-       <p> Creamos una app <p> 
-       <pre>
-          <code class="python">
-          cd apps
-          django-admin startapp miapp
-          </code>
-       </pre>
-
-
-
-
-
-
-      <h3 id="odoo2">1.2 GitHub para Odoo</h3>      
-      <p> Lo Básico que tenemos que conocer de GitHub y Linux para Odoo <p> 
-       <pre>
-          <code class="python">
-          ## Instalamos git ###
-          sudo apt install git
-
-          # Instalamos un módulo
-          git clone https://github.com/odoochile/Odoo-Chile
-
-          ## Reiniciamos Odoo ##
-          service odoo restart
-
-          ## Actualizar tu directorio local ##
-          git pull
-
-          # Borramos un directorio con ficheros
-          rm -Rf Odoo-Chile
-          </code>
-        </pre>
-
-      
-
-      <h3 id="link1">Links de Interés</h3>
-      <ul>    
-         <li><a href="https://www.odoo.com/documentation/10.0/">https://www.odoo.com/documentation/10.0/</a></li>
-	 <li><a href="http://fundamentos-de-desarrollo-en-odoo.readthedocs.io/es/latest/capitulos/comenzando-con-odoo.html">fundamentos-de-desarrollo-en-odoo
-        </a> 
-	 <li><a href="https://demo2.odoo.com">demo2.odoo.com</a></li>
-	      
-	      
-	      </li>
-	      
-	      
-      </ul>
-
-
-      <h3 id="oca1">7.1 Módulos OCA</h3>
-      <ul>    
-         
-      </ul>
+          <h3 id="instalando-django">1.2 Instalando Django</h3>      
+          <p> Creamos el entorno virtual con virtualenv que es una herramienta de desarrollo en Python escrita por Ian Bicking y usada para crear entornos aislados para Python, en los que es posible instalar paquetes sin interferir con otros virtualenvs ni con los paquetes de Python del sistema.<p> 
+           <pre>
+            <code class="python">
+              virtualenv env --python=python3
+              cd env
+              source bin/activate
+            </code>
+          </pre>
+          <p> Instalamos Django 2.0 <p> 
+           <pre>
+            <code class="python">
+              pip install Django
+            </code>
+          </pre>
+          <p> Creamos un proyecto en Django <p> 
+           <pre>
+            <code class="python">
+              django-admin startproject miproyecto
+            </code>
+          </pre>
+          <p> Creamos una app <p> 
+           <pre>
+            <code class="python">
+              cd apps
+              django-admin startapp miapp
+            </code>
+          </pre>
 
 
 
 
-    
+
+
+          <h3 id="odoo2">1.2 GitHub para Odoo</h3>      
+          <p> Lo Básico que tenemos que conocer de GitHub y Linux para Odoo <p> 
+           <pre>
+            <code class="python">
+              ## Instalamos git ###
+              sudo apt install git
+
+              # Instalamos un módulo
+              git clone https://github.com/odoochile/Odoo-Chile
+
+              ## Reiniciamos Odoo ##
+              service odoo restart
+
+              ## Actualizar tu directorio local ##
+              git pull
+
+              # Borramos un directorio con ficheros
+              rm -Rf Odoo-Chile
+            </code>
+          </pre>
+
+
+
+          <h3 id="link1">Links de Interés</h3>
+          <ul>    
+           <li><a href="https://www.djangoproject.com/">https://www.djangoproject.com/</a></li>	      
+         </ul>
+
+
+
+
+
+       </div>
+     </div>
+   </section>
+   <section class="vibrant centered">
+    <div class="">
+      <h4> Esta documentación es desarrollada gracias a la colaboración de diferentes fuentes en la web, favor cualquier error reportarlo al mi repositorio <a href="https://falconsoft3d.github.io/trucos-django/" target="_blank">trucos-django</a>. Si te gusto compártelo</h4>
     </div>
-  </div>
-</section>
-<section class="vibrant centered">
-  <div class="">
-    <h4> Esta documentación es desarrollada gracias a la colaboración de diferentes fuentes en la web, favor cualquier error reportarlo al mi repositorio <a href="https://falconsoft3d.github.io/trucos-django/" target="_blank">trucos-django</a>. Si te gusto compártelo</h4>
-  </div>
-</section>
-<footer>
-  <div class="">
-    <p> &copy; Copyright Marlon Falcón Hernández. <a href="mailto:mfalcon@falconsolutions.cl">mfalcon@falconsolutions.cl</a></p>
-  </div>
-</footer>
+  </section>
+  <footer>
+    <div class="">
+      <p> &copy; Copyright Marlon Falcón Hernández. <a href="mailto:mfalcon@falconsolutions.cl">mfalcon@falconsolutions.cl</a></p>
+    </div>
+  </footer>
 </div>
- 
+
 <script src="js/jquery.min.js"></script> 
 <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=css&skin=sunburst"></script>
 <script src="js/layout.js"></script>
@@ -199,5 +170,5 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
   });
 });
 </script> 
- </body>
+</body>
 </html>
