@@ -71,6 +71,8 @@
         <li class="separator"></li>
         <li><strong>3 Vistas</strong></li>
         <li><a href="#django-herencias-plantillas" class="cc-active">3.1 Herencias Plantillas</a></li>
+        <li><a href="#django-cargar-header" class="cc-active">3.2 Cargar Header</a></li>
+        <li><a href="#django-cargar-static" class="cc-active">3.3 Cargar Static</a></li>
 
       </ul>
       <div class="docs-content">
@@ -386,6 +388,29 @@ TEMPLATES = [
 {% block title %} Mascotas {% endblock %}
 </code>
 </pre>
+
+
+<h3 id="django-cargar-header">3.2 Cargar Header</h3>      
+<p> Configuramos la carpeta de plantiallas <strong>admin.py</strong><p> 
+<pre>
+<code class="python">
+{% include "base/header.html" %}
+</code>
+</pre>
+
+<h3 id="django-cargar-static">3.3 Cargar Static</h3>      
+<p> Configuramos la carpeta de plantiallas <strong>admin.py</strong><p> 
+<pre>
+<code class="python">
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+</code>
+</pre>
+
+
+
+<li><a href="#django-cargar-static" class="cc-active">3.2 Cargar Static</a></li>
+
 
 
 
