@@ -68,6 +68,10 @@
         <li><a href="#django-modelos" class="cc-active">2.1 Modelos</a></li>
         <li><a href="#django-admin" class="cc-active">2.2 Modelos Admin</a></li>
 
+        <li class="separator"></li>
+        <li><strong>3 Vistas</strong></li>
+        <li><a href="#django-herencias-plantillas" class="cc-active">3.1 Herencias Plantillas</a></li>
+
       </ul>
       <div class="docs-content">
 
@@ -338,6 +342,30 @@ from apps.mascota.models import Vacuna, Mascota
 # Register your models here.
 admin.site.register(Vacuna)
 admin.site.register(Mascota)
+</code>
+</pre>
+
+
+
+<h3 id="django-herencias-plantillas">3.1 Herencias Plantillas</h3>      
+<p> Configuramos la carpeta de plantiallas <strong>admin.py</strong><p> 
+<pre>
+<code class="python">
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
 </code>
 </pre>
 
