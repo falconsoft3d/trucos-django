@@ -73,7 +73,7 @@
       <div class="docs-content">
 
         <h3 id="que-es-django">1.1 ¿Qué es Django?</h3>      
-        <p> <strong>Django</strong> Django es un framework para aplicaciones web gratuito y open source, escrito en Python. Es un WEB framework - un conjunto de componentes que te ayudan a desarrollar sitios web más fácil y rápidamente.
+        <p> <strong>Django</strong> es un framework para aplicaciones web gratuito y open source, escrito en Python. Es un WEB framework - un conjunto de componentes que te ayudan a desarrollar sitios web más fácil y rápidamente.
           <p> Entre sus principales módulos podemos señalar:</p>
           <ul>
             <li>Codigo Abierto</li>
@@ -85,28 +85,28 @@
           <p> Creamos el entorno virtual con <strong>Virtualenv</strong> que es una herramienta de desarrollo en Python escrita por <strong>Ian Bicking</strong> y usada para crear entornos aislados para <strong>Python</strong>, en los que es posible instalar paquetes sin interferir con otros <strong>virtualenvs</strong> ni con los paquetes de <strong>Python</strong> del sistema.<p> 
            <pre>
             <code class="python">
-              virtualenv env --python=python3
-              cd env
-              source bin/activate
+virtualenv env --python=python3
+cd env
+source bin/activate
             </code>
           </pre>
           <p> Instalamos Django 2.0 <p> 
            <pre>
             <code class="python">
-              pip install Django
+pip install Django
             </code>
           </pre>
           <p> Creamos un proyecto en Django <p> 
            <pre>
-            <code class="python">
-              django-admin startproject miproyecto
-            </code>
+<code class="python">
+django-admin startproject miproyecto
+</code>
           </pre>
           <p> Creamos una app <p> 
            <pre>
             <code class="python">
-              cd apps
-              django-admin startapp miapp
+cd apps
+django-admin startapp miapp
             </code>
           </pre>
 
@@ -114,13 +114,13 @@
           <p> Instalamos psycopg2<p> 
            <pre>
             <code class="python">
-              pip install psycopg2
+pip install psycopg2
             </code>
           </pre>
           <p> Configuramos el gestor de BD settings.py <p> 
            <pre>
             <code class="python">
-              DATABASES = {
+DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'test',
@@ -136,43 +136,44 @@
           <p> Desplegamos Django<p> 
            <pre>
             <code class="python">
-              # Creamos los usuario
-              adduser django
+# Creamos los usuario
+adduser django
 
-              # Nos conectamos con el usuario
-              su - django
+# Nos conectamos con el usuario
+su - django
 
-              # Instalamos el entorno
-              sudo apt install python-virtualenv
+# Instalamos el entorno
+sudo apt install python-virtualenv
 
-              # Creamos un entorno virtual
-              virtualenv .venv --python=python3
+# Creamos un entorno virtual
+virtualenv .venv --python=python3
 
-              # Activamos el enterno
-              source ~/.venv/bin/activate
+# Activamos el enterno
+source ~/.venv/bin/activate
 
-              # Instalamos Django
-              pip install Django
-              pip install psycopg2
+# Instalamos Django
+pip install Django
+pip install psycopg2
 
-              # Clonamos el proyecto
-              git clone https://marlonfalcon@bitbucket.org/marlonfalcon/erp.git
+# Clonamos el proyecto
+git clone https://marlonfalcon@bitbucket.org/marlonfalcon/erp.git
 
-              # Instalamos Ngix
-              sudo apt-get install nginx -y
-              cd /etc/nginx/sites-available
-              git clone https://github.com/falconsoft3d/ngix-para-odoo-erp/
-              cd ngix-para-odoo-erp/
-              sudo cp /etc/nginx/sites-available/ngix-para-odoo-erp/default.conf /etc/nginx/sites-available/default.conf
-              cd ..
-              mv default default-temp
-              mv default.conf default
+# Instalamos Ngix
+sudo apt-get install nginx -y
+cd /etc/nginx/sites-available
+git clone https://github.com/falconsoft3d/ngix-para-odoo-erp/
+cd ngix-para-odoo-erp/
+sudo cp /etc/nginx/sites-available/ngix-para-odoo-erp/default.conf /etc/nginx/sites-available/default.conf
 
-              cd /etc/nginx/sites-available
-              nano default
+cd ..
+mv default default-temp
+mv default.conf default
 
-              #default
-              server {
+cd /etc/nginx/sites-available
+nano default
+
+#default
+server {
     listen 80;
     server_name 186.64.123.44;
 
@@ -187,53 +188,53 @@
     }
 }
 
-            # reiniciamos Ngix
-            nginx -s reload
+# reiniciamos Ngix
+nginx -s reload
 
-            # Probamos el server de prueba
-            python manage.py runserver 0.0.0.0:8000
-
-
-            #nano settings.py
-            try:
-                from local_settings import *
-            except ImportError:
-                pass
-
-            # nano local_settings.py
-            ALLOWED_HOSTS = ['186.64.123.44']
+# Probamos el server de prueba
+python manage.py runserver 0.0.0.0:8000
 
 
-            # Instalamos gunicorn
-            pip install gunicorn
+#nano settings.py
+try:
+  from local_settings import *
+except ImportError:
+   pass
 
-            # probamos que funcione
-            gunicorn --bind 0.0.0.0:8000 erp.wsgi
+# nano local_settings.py
+ALLOWED_HOSTS = ['186.64.123.44']
 
-            # Creamos el servicio
-            sudo su
-            nano /etc/systemd/system/erp.service
 
-            # Valores
-            [Unit]
-            Description=Django ERP
-            After=network.target
+# Instalamos gunicorn
+pip install gunicorn
 
-            [Service]
-            User=django
-            Group=www-data
-            WorkingDirectory=/home/django/erp
-            ExecStart=/home/django/.venv/bin/gunicorn --access-logfile - --workers 3 --bind unix:/home/django/erp/erp.sock erp.wsgi:application
+# probamos que funcione
+gunicorn --bind 0.0.0.0:8000 erp.wsgi
 
-            [Install]
-            WantedBy=multi-user.target
+# Creamos el servicio
+sudo su
+nano /etc/systemd/system/erp.service
 
-            # Activamos servicio Gunicorn
-            sudo systemctl start erp
-            sudo systemctl enable erp
+# Valores
+[Unit]
+Description=Django ERP
+After=network.target
 
-            # Reiniciamos
-            service erp restart                
+[Service]
+User=django
+Group=www-data
+WorkingDirectory=/home/django/erp
+ExecStart=/home/django/.venv/bin/gunicorn --access-logfile - --workers 3 --bind unix:/home/django/erp/erp.sock erp.wsgi:application
+
+[Install]
+WantedBy=multi-user.target
+
+# Activamos servicio Gunicorn
+sudo systemctl start erp
+sudo systemctl enable erp
+
+# Reiniciamos
+service erp restart                
             </code>
           </pre>
          
