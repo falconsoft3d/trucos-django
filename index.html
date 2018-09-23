@@ -66,6 +66,7 @@
         <li class="separator"></li>
         <li><strong>2 Modelos</strong></li>
         <li><a href="#django-modelos" class="cc-active">2.1 Modelos</a></li>
+        <li><a href="#django-admin" class="cc-active">2.2 Modelos Admin</a></li>
 
       </ul>
       <div class="docs-content">
@@ -318,6 +319,30 @@ class Mascota(models.Model):
     vacuna = models.ManyToManyField(Vacuna, blank=True)
 </code>
 </pre>
+
+
+<h3 id="django-admin">2.2 Admin</h3>      
+<p> Para mostrar los modelos en el admin en cada app hay que configurar <strong>admin.py</strong><p> 
+<pre>
+<code class="python">
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals
+from __future__ import absolute_import
+
+from django.contrib import admin
+
+# Register your models here.
+
+from apps.mascota.models import Vacuna, Mascota 
+
+# Register your models here.
+admin.site.register(Vacuna)
+admin.site.register(Mascota)
+</code>
+</pre>
+
+
+
 
 
           <h3 id="link1">Links de Interés</h3>
