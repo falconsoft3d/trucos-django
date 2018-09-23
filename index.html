@@ -108,6 +108,22 @@ django-admin startapp miapp
             </code>
           </pre>
 
+
+<p>Incluimos la app en el settings.py<p> 
+<pre>
+<code class="python">
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'apps.adopcion',
+    'apps.mascota',
+]          
+</code>
+</pre>
           <h3 id="django-postgresql">1.3 Postgresql</h3>      
           <p> Instalamos psycopg2<p> 
            <pre>
