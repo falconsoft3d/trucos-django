@@ -44,7 +44,7 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
 <nav>
  
   	<div class="pull-left">
-    	<h1><a href="http://www.marlonfalcon.cl" target="_blank"><img class="w" src="img/w.png" alt="Free Documentation Template Icon" /> <span>+569 4299 4534</span></a></h1>
+    	<h1><a href="http://www.marlonfalcon.cl" target="_blank"><img class="w" src="img/w.png" alt="Free Documentation Template Icon" /> <span>+56 9 7882 5365</span></a></h1>
     </div>
 
 
@@ -73,8 +73,8 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
   <div class="container">
     <ul class="docs-nav">
       <li><strong>1 Introducción</strong></li>
-      <li><a href="#odoo1" class="cc-active">1.1 ¿Qué es Odoo?</a></li>
-      <li><a href="#odoo2" class="cc-active">1.2 GitHub para Odoo</a></li>
+      <li><a href="#que-es-django" class="cc-active">1.1 ¿Qué es Django?</a></li>
+      <li><a href="#instalando-django" class="cc-active">1.2 Instalando Django</a></li>
 
       <li class="separator"></li>
       <li><strong>2 Programación en Python</strong></li>
@@ -85,16 +85,46 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
     </ul>
     <div class="docs-content">
     
-      <h3 id="odoo1">1.1 ¿Qué es Odoo?</h3>      
-      <p> <strong>Odoo ERP</strong> es un software libre que puede ser instalado en la nube y se puede unir con una app para que desde tu celular puedas interactuar con el, tiene varios módulos muy interesantes para la administración de las empresas. Se conocía anteriormente como OpenERP, que es un sistema de ERP integrado de código abierto actualmente producido por la empresa belga Odoo S.A. El fabricante declara su producto como una alternativa de código abierto a SAP ERP y Microsoft Dynamics.
-      <p> Odoo usa una arquitectura cliente servidor donde los clientes se conectan usando un navegador via RPC. Generalmente, la lógica y la extensión de negocio se realizan en el lado del servidor. <p> 
+      <h3 id="que-es-django">1.1 ¿Qué es Django?</h3>      
+      <p> <strong>Django</strong> Django es un framework para aplicaciones web gratuito y open source, escrito en Python. Es un WEB framework - un conjunto de componentes que te ayudan a desarrollar sitios web más fácil y rápidamente.
       <p> Entre sus principales módulos podemos señalar:</p>
      <ul>
-        <li>CRM Customer relationship management</li>
-        <li>Módulo de Ventas</li>
-        <li>Módulo de Contabilidad</li>
-        <li>Módulo de Compras</li>
+        <li>Codigo Abierto</li>
+        <li>Usa Python</li>
       </ul>
+
+
+      <h3 id="instalando-django">1.2 Instalando Django</h3>      
+      <p> Creamos el entorno virtual <p> 
+       <pre>
+          <code class="python">
+          virtualenv env --python=python3
+          cd env
+          source bin/activate
+          </code>
+       </pre>
+       <p> Instalamos Django 2.0 <p> 
+       <pre>
+          <code class="python">
+          pip install Django
+          </code>
+       </pre>
+       <p> Creamos un proyecto en Django <p> 
+       <pre>
+          <code class="python">
+          django-admin startproject miproyecto
+          </code>
+       </pre>
+       <p> Creamos una app <p> 
+       <pre>
+          <code class="python">
+          cd apps
+          django-admin startapp miapp
+          </code>
+       </pre>
+
+
+
 
 
 
@@ -149,7 +179,7 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
 </section>
 <section class="vibrant centered">
   <div class="">
-    <h4> Esta documentación es desarrollada gracias a la colaboración de diferentes fuentes en la web, favor cualquier error reportarlo al mi repositorio <a href="https://github.com/falconsoft3d/Trukos-odoo-10/" target="_blank">Trukos-odoo-10</a>. Si te gusto compártelo</h4>
+    <h4> Esta documentación es desarrollada gracias a la colaboración de diferentes fuentes en la web, favor cualquier error reportarlo al mi repositorio <a href="https://falconsoft3d.github.io/trucos-django/" target="_blank">trucos-django</a>. Si te gusto compártelo</h4>
   </div>
 </section>
 <footer>
