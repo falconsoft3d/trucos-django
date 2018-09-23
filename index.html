@@ -60,6 +60,7 @@
         <li><strong>1 Introducción</strong></li>
         <li><a href="#que-es-django" class="cc-active">1.1 ¿Qué es Django?</a></li>
         <li><a href="#instalando-django" class="cc-active">1.2 Instalando Django</a></li>
+        <li><a href="#django-postgresql" class="cc-active">1.3 Configurando Postgresql</a></li>
 
         <li class="separator"></li>
         <li><strong>2 Programación en Python</strong></li>
@@ -107,6 +108,29 @@
               django-admin startapp miapp
             </code>
           </pre>
+
+          <h3 id="django-postgresql">1.3 Configurando Postgresql</h3>      
+          <p> Instalamos psycopg2<p> 
+           <pre>
+            <code class="python">
+              pip install psycopg2
+            </code>
+          </pre>
+          <p> Configuramos el gestor de BD settings.py <p> 
+           <pre>
+            <code class="python">
+              DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'test',
+        'USER': 'odoo',
+        'PASSWORD': False,
+        'HOTS': 'localhost',
+        'PORT': 5432,
+    }
+}</code>
+          </pre>
+          
 
 
 
