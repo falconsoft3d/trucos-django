@@ -64,10 +64,8 @@
         <li><a href="#django-produccion" class="cc-active">1.4 Produccion</a></li>
 
         <li class="separator"></li>
-        <li><strong>2 Programación en Python</strong></li>
-        <li><a href="#var1" class="cc-active">2.1 Variables</a></li>
-        <li><a href="#var2" class="cc-active">2.2 Funciones</a></li>
-        <li><a href="#var3" class="cc-active">2.3 Clases</a></li>
+        <li><strong>2 Modelos</strong></li>
+        <li><a href="#django-modelos" class="cc-active">2.1 Modelos</a></li>
 
       </ul>
       <div class="docs-content">
@@ -245,26 +243,19 @@ service erp restart
 
 
 
-          <h3 id="odoo2">1.2 GitHub para Odoo</h3>      
-          <p> Lo Básico que tenemos que conocer de GitHub y Linux para Odoo <p> 
-           <pre>
-            <code class="python">
-              ## Instalamos git ###
-              sudo apt install git
+<h3 id="django-modelos">2.1 Modelos</h3>      
+<p> Lo Básico que tenemos que conocer de GitHub y Linux para Odoo <p> 
+<pre>
+<code class="python">
+from .. adopcion.models import Persona
 
-              # Instalamos un módulo
-              git clone https://github.com/odoochile/Odoo-Chile
-
-              ## Reiniciamos Odoo ##
-              service odoo restart
-
-              ## Actualizar tu directorio local ##
-              git pull
-
-              # Borramos un directorio con ficheros
-              rm -Rf Odoo-Chile
-            </code>
-          </pre>
+class Mascota(models.Model):
+    nombre = models.CharField(max_length=50)
+    sexo = models.CharField(max_length=10)
+    edad_aproximada = models.IntegerField()
+    fecha_rescate = models.DateField()
+</code>
+</pre>
 
 
 
