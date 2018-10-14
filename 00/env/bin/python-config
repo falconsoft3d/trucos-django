@@ -1,4 +1,4 @@
-#!/home/marlon/Documents/Web/trucos-django/00/env/bin/python
+#!/home/marlon/Documents/Programacion/djando/00/udemy/env/bin/python
 
 import sys
 import getopt
