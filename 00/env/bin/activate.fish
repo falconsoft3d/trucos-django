@@ -36,7 +36,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/home/marlon/Documents/Programacion/djando/00/udemy/env"
+set -gx VIRTUAL_ENV "/home/marlon/Documents/Web/trucos-django/00/env"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH

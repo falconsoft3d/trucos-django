@@ -1,4 +1,4 @@
-#!/home/marlon/Documents/Programacion/djando/00/udemy/env/bin/python3
+#!/home/marlon/Documents/Web/trucos-django/00/env/bin/python3
 from django.core import management
 
 if __name__ == "__main__":
