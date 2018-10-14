@@ -70,9 +70,10 @@
 
         <li class="separator"></li>
         <li><strong>3 Plantillas</strong></li>
-        <li><a href="#django-herencias-plantillas" class="cc-active">3.1 Herencias Plantillas</a></li>
-        <li><a href="#django-cargar-header" class="cc-active">3.2 Cargar Header</a></li>
-        <li><a href="#django-cargar-static" class="cc-active">3.3 Cargar Static</a></li>
+        <li><a href="#django-inciando-plantillas" class="cc-active">3.1 Iniciando con Plantillas</a></li>
+        <li><a href="#django-herencias-plantillas" class="cc-active">3.2 Herencias Plantillas</a></li>
+        <li><a href="#django-cargar-header" class="cc-active">3.3 Cargar Header</a></li>
+        <li><a href="#django-cargar-static" class="cc-active">3.4 Cargar Static</a></li>
 
         <li class="separator"></li>
         <li><strong>90 Documentacion</strong></li>
@@ -365,7 +366,34 @@ admin.site.register(Mascota)
 
 
 
-<h3 id="django-herencias-plantillas">3.1 Herencias Plantillas</h3>      
+<h3 id="django-inciando-plantillas">3.1 Iniciando con Plantillas</h3>      
+<p> Inicio de plantillas<p> 
+<pre>
+<code class="python">
+
+## core/views.py
+
+from django.shortcuts import render, HttpResponse
+
+# Create your views here.
+def home(request):
+    return HttpResponse("<h1>Mi web Personal</h1><h2>Portada</h2>")
+
+## webpersonal/urls.py
+from core import views
+
+urlpatterns = [
+    path('', views.home, name="home"),
+    path('admin/', admin.site.urls),
+]
+
+</code>
+</pre>
+
+
+
+
+<h3 id="django-herencias-plantillas">3.2 Herencias Plantillas</h3>      
 <p> Configuramos la carpeta de plantiallas <strong>admin.py</strong><p> 
 <pre>
 <code class="python">
@@ -406,7 +434,7 @@ TEMPLATES = [
 </pre>
 
 
-<h3 id="django-cargar-header">3.2 Cargar Header</h3>      
+<h3 id="django-cargar-header">3.3 Cargar Header</h3>      
 <p> Configuramos archivos html<p> 
 <pre>
 <code class="python">
@@ -414,7 +442,7 @@ TEMPLATES = [
 </code>
 </pre>
 
-<h3 id="django-cargar-static">3.3 Cargar Static</h3>      
+<h3 id="django-cargar-static">3.4 Cargar Static</h3>      
 <p> Configuramos la carpeta static<p> 
 <pre>
 <code class="python">
@@ -425,7 +453,7 @@ TEMPLATES = [
 
 
 
-<li><a href="#django-cargar-static" class="cc-active">3.2 Cargar Static</a></li>
+<li><a href="#django-cargar-static" class="cc-active">3.5 Cargar Static</a></li>
 
 
 
