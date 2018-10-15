@@ -74,6 +74,9 @@
         <li><a href="#django-herencias-plantillas" class="cc-active">3.2 Herencias Plantillas</a></li>
         <li><a href="#django-cargar-header" class="cc-active">3.3 Cargar Header</a></li>
         <li><a href="#django-cargar-static" class="cc-active">3.4 Cargar Static</a></li>
+        <li><a href="#django-for" class="cc-active">3.5 For</a></li>
+        <li><a href="#django-page" class="cc-active">3.6 Saber si estoy en una Página</a></li>
+        <li><a href="#django-url" class="cc-active">3.7 URL</a></li>
 
         <li class="separator"></li>
         <li><strong>90 Documentacion</strong></li>
@@ -451,6 +454,54 @@ TEMPLATES = [
 <lin rel="stylesheet" href="{% static 'css/style.css' %}">
 </code>
 </pre>
+
+<h3 id="django-cargar-static">3.5 For</h3>      
+<p> Ciclo FOR<p> 
+<pre>
+<code class="python">
+{% block content %}
+    {% for project in projects %}
+            <!-- Proyecto -->
+            <div class="row project">   
+                    <div class="col-lg-3 col-md-4 offset-lg-1">
+                        <img class="img-fluid"  src="{{project.image.url}}">
+                    </div>
+                <div class="col-lg-7 col-md-8">
+                        <h2 class="section-heading title">{{project.title}}</h2>   
+                    <p>{{project.description}}</p>
+                    {% if project.link %}
+                    <p><a href="{{project.link}}">Más información</a></p>
+                    {% endif %}  
+                </div>
+                </div>
+    {% endfor %}
+{% endblock %}
+</code>
+</pre>
+
+<h3 id="django-page">3.6 Saber si estoy en una Página</h3>      
+<p>Pagina<p> 
+<pre>
+<code class="python">
+{% if request.path != "/" %}<hr>{% endif %}
+</code>
+</pre>
+
+<h3 id="django-url">3.7 URL</h3>      
+<p>Pagina<p> 
+<pre>
+<code class="python">
+<a class="nav-link" href="{% url 'home' %}">Portada</a>
+</code>
+</pre>
+
+
+
+
+
+<li><a href="#django-page" class="cc-active">3.6 Saber si estoy en una Página</a></li>
+
+
 
 
 
