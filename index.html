@@ -458,7 +458,7 @@ TEMPLATES = [
 <h3 id="django-cargar-static">3.5 For</h3>      
 <p> Ciclo FOR<p> 
 <pre>
-<code class="python">
+<code class="html">
 {% block content %}
     {% for project in projects %}
             <!-- Proyecto -->
@@ -482,7 +482,7 @@ TEMPLATES = [
 <h3 id="django-page">3.6 Saber si estoy en una Página</h3>      
 <p>Pagina<p> 
 <pre>
-<code class="python">
+<code class="html">
 {% if request.path != "/" %}<hr>{% endif %}
 </code>
 </pre>
@@ -490,7 +490,7 @@ TEMPLATES = [
 <h3 id="django-url">3.7 URL</h3>      
 <p>Pagina<p> 
 <pre>
-<code class="python">
+<code class="html">
 <a class="nav-link" href="{% url 'home' %}">Portada</a>
 </code>
 </pre>
