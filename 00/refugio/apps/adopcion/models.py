@@ -20,4 +20,4 @@ class Persona(models.Model):
 
     # Para que muestre el nombre
     def __str__(self):
-        return self.title
+        return self.nombre
