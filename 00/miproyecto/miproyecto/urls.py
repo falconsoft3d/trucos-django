@@ -1,4 +1,4 @@
-"""refugio URL Configuration
+"""miproyecto URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.1/topics/http/urls/
@@ -15,10 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from django.conf.urls import url, include
+from cruds_adminlte.urls import crud_for_app
+
+urlpatterns += crud_for_app('testapp')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url('mascota', include('apps.mascota.urls')),
-    url('adopcion', include('apps.adopcion.urls')),
 ]
