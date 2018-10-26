@@ -17,8 +17,15 @@ class ListCliente(ListView):
     template_name = 'list.html'
 
 
-class CreateCliete(CreateView):
+class CreateCliente(CreateView):
     model = Cliente
     form_class = ClienteForm
     template_name = 'crear_cliente.html'
-    success_url = reverse_lazy('index')
+    success_url = reverse_lazy('home')
+
+
+class UpdateCliente(UpdateView):
+    model = Cliente
+    form_class = ClienteForm
+    template_name = 'crear_cliente.html'
+    success_url = reverse_lazy('home')

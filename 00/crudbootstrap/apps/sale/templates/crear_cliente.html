@@ -4,12 +4,13 @@
 {% block title %}Listar Clientes{% endblock %}
 
 {% block main %}
-
+<div class="container">
 <form action="" method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit">Crear</button>
+    <button type="submit" class="btn btn-lg btn-primary">Crear</button>
 </form>
+</div>
 
 {% endblock %}
 

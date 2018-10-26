@@ -16,9 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from apps.sale import views as app_views
+from django.conf.urls import url, include
 
 urlpatterns = [
     path('', app_views.home, name="home"),
     path('list/', app_views.ListCliente.as_view(), name="listar_cliente"),
+    path('crear_cliente/',app_views.CreateCliente.as_view(), name = "crear_cliente"),
+    url('editar_cliente/(?P<pk>\d+)/$',app_views.UpdateCliente.as_view(), name = "editar_cliente"),
     path('admin/', admin.site.urls, name="admin"),
 ]
