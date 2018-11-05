@@ -1,0 +1,19 @@
+{% extends 'base/base.html' %}
+
+{% block title %} Eliminar {% endblock %}
+
+{% block content %}
+<main role="main">
+    <br>
+    <br>
+    <br>
+<div class="container">
+    <form method="post">
+            {% csrf_token %}
+            <h3>¿Estás seguro que quiere eliminar el registro de {{ object.nombres }}? </h3>
+            <button class="btn btn-danger" type="submit">Si, eliminar</button>
+            <button class="btn btn-default" href="{% url 'jugador_listar' %}">Cancelar</button>
+    </form>
+</div>
+</main>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'base/base.html' %}
+
+{% block title %} Crear {% endblock %}
+
+{% block content %}
+<main role="main">
+    <br>
+    <br>
+    <br>
+<div class="container">
+    <p><strong>Indentificación: </strong>{{ object.id }}</p>
+    <p><strong>Nombres: </strong>{{ object.nombres}}</p>
+    <p><strong>Apellidos: </strong>{{ object.apellidos}}</p>
+    <p><strong>Email: </strong>{{ object.email}}</p>
+
+    <a class="btn btn-primary" href="{% url 'jugador_listar' %}">OK</a>
+    <a class="btn btn-warning" href="{% url 'jugador_editar' jugador.id %}"><i class="fas fa-edit"></i></a>
+    <a class="btn btn-danger"  href="{% url 'jugador_eliminar' jugador.id %}"><i class="fas fa-trash-alt"></i></a>
+
+</div>
+</main>
+{% endblock %}

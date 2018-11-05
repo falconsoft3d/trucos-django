@@ -1,0 +1,18 @@
+{% extends 'base/base.html' %}
+
+{% block title %} Crear {% endblock %}
+
+{% block content %}
+<main role="main">
+    <br>
+    <br>
+    <br>
+<div class="container">
+    <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn btn-success" type="submit">Guardar</button>
+    </form>
+</div>
+</main>
+{% endblock %}

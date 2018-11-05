@@ -1,0 +1,64 @@
+{% extends 'base/base.html' %}
+
+{% block title %} Crear {% endblock %}
+
+{% block content %}
+<main role="main">
+    <div class="container">
+    <br>
+    <br>
+    <br>
+    <table class ="table table-striped">
+            <thead>
+        <tr>
+            <td>#</td>
+            <td>Nombres</td>
+            <td>Apellidos</td>
+            <td>Fecha de Nacimiento</td>
+            <td>Email</td>
+            <td>Acciones</td>
+        </tr>
+    </thead>
+    <tbody>
+        {% if object_list %}
+        {% for jugador in object_list %}
+        <tr>
+            <td>{{ jugador.id }}</td>
+            <td>{{ jugador.nombres }}</td>
+            <td>{{ jugador.apellidos }}</td>
+            <td>{{ jugador.fecha_nacimiento }}</td>
+            <td>{{ jugador.email }}</td>
+            <td>
+                    <a class="btn btn-primary" href="{% url 'jugador_show' jugador.id %}"><i class="fas fa-eye"></i></a>
+                    <a class="btn btn-warning" href="{% url 'jugador_editar' jugador.id %}"><i class="fas fa-edit"></i></a>
+                    <a class="btn btn-danger"  href="{% url 'jugador_eliminar' jugador.id %}"><i class="fas fa-trash-alt"></i></a>
+                    
+            </td>
+        </tr>
+       
+        {% endfor  %}
+    </tbody>
+    </table>
+    <nav aria-label="Page navigation example">
+    <ul class="pager pagination">
+        <li class="page-item">
+            {% if page_obj.has_previous %}
+                <a class="page-link" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+            {% endif %}    
+        </li>
+        <li class="page-item">
+            {% if page_obj.has_next %}
+                <a class="page-link" href="?page={{ page_obj.next_page_number }}">Next</a>
+            {% endif %}    
+            </li>
+        </ul>
+    </nav>
+
+        {% else %}
+        <h1>VACIO</h1>
+        {% endif %}
+
+</div>
+</div>
+</main>
+{% endblock %}
